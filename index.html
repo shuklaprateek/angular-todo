@@ -1,0 +1,42 @@
+
+<html>
+
+<head>
+ 
+   <!-- <link href="//fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" />
+ -->
+	<script src= "C:\Users\Prateek\Desktop\Hub\angular.min.js"></script>
+	<script src ="C:\Users\Prateek\Desktop\Hub\Angular Project\App.js"></script>
+
+</head>
+
+	<body ng-app="Todo">
+	    <div class="page-container" ng-controller="TodoCtrl">
+	    	<h2> ToDos </h2>
+
+	    	<ul class='todo-list' ng-repeat="todo in todos track by $index">
+
+	    		<li>
+	    			<span>{{ todo }}</span>
+	    			<button class="bt bt-achieve" ng-click="done(todo)">Done</button>
+	    		</li>
+
+	    	</ul>
+
+    	</div>  
+
+    	<ul class= "add-todo">
+    		<li>
+    			<input type= "text" class="txt" placeholder="New Todo"   ng-model="newTodo" ng-keyup="add($event)"/>	
+    		</li>
+
+   </body>
+</html>
+
+
+
+
+
+
+
